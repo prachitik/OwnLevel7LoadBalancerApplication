@@ -34,7 +34,6 @@ public class LoadBalancerController {
 
     @GetMapping("route")
     public ResponseEntity<String> routeRequest() throws ExecutionException, InterruptedException {
-        //todo: add routerequest method in lb service and call here
         try{
             Future<String> response = loadBalancerService.routeRequest();
             return ResponseEntity.ok(response.get()); // wait for the request to be processed

@@ -23,7 +23,6 @@ public class LoadBalancerService {
     public LoadBalancerService() {
         LoadBalancerStrategy strategy = new RoundRobinStrategy();
         this.loadBalancer = new LoadBalancer(this.servers, strategy);
-        // todo: health check - is it required here?
         startHealthChecks();
     }
 

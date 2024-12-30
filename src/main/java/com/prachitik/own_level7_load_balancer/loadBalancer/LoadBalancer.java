@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class LoadBalancer {
-    private CopyOnWriteArrayList<BackendServer> servers; // todo: should be thread safe
+    private CopyOnWriteArrayList<BackendServer> servers;
     private LoadBalancerStrategy loadBalancerStrategy;
 
     public LoadBalancer(CopyOnWriteArrayList<BackendServer> servers, LoadBalancerStrategy loadBalancerStrategy){
